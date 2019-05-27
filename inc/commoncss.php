@@ -186,10 +186,12 @@ function animalshelter_common_custom_css() {
 			footer {
 				color: {$footerTextColor};
 			}
+			.footer-area .single-footer-widget li a,
 			.single-footer-widget a,
 			.footer-widget a {
 				color: {$anchorcolor};
 			}
+			.footer-area .single-footer-widget li a:hover,
 			.single-footer-widget a:hover,
 			.single-footer-widget ul li a:hover,
 			.footer-bottom a:hover{
@@ -201,6 +203,9 @@ function animalshelter_common_custom_css() {
 			.footer-area .copyright-text {
 				background-color: {$footerbtombg};
 				color: {$footerbtomtextcolor};
+			}
+			.copyright-text .footer-bottom{
+			    color: {$footerbtomtextcolor};
 			}
 			.footer-area .copyright-text .footer-social a,
 			.footer-area .copyright-text a {
