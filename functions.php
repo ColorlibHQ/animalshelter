@@ -71,12 +71,20 @@ if( ! defined( 'ANIMALSHELTER_DIR_PATH_WIDGET' ) ) {
 
 
 
+// Admin Enqueue script
+function animalshelter_admin_script(){
+    wp_enqueue_style( 'animalshelter-admin', get_template_directory_uri().'/assets/css/animalshelter_admin.css', false, '1.0.0' );
+    wp_enqueue_script( 'animalshelter_admin', get_template_directory_uri().'/assets/js/animalshelter_admin.js', false, '1.0.0' );
+}
+add_action( 'admin_enqueue_scripts', 'animalshelter_admin_script' );
+
+
+
 
 /**
  * Include File
  *
  */
-
 require_once( ANIMALSHELTER_DIR_PATH_INC . 'breadcrumbs.php' );
 require_once( ANIMALSHELTER_DIR_PATH_INC . 'widgets-reg.php' );
 require_once( ANIMALSHELTER_DIR_PATH_INC . 'wp_bootstrap_navwalker.php' );
